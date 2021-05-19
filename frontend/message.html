@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+ <head>
+ 	<!-- CSS File here-->
+ 	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="/css/message.css">
+    <link rel="stylesheet" type="text/css" href="/css/sidebar.css">
+    <title>Time to Work: Message</title>
+ </head>
+
+ <body>
+	<div class="wrapper">
+
+		<!-- sidebar -->
+	    <nav id="sidebar">
+	      <div class="sidebar-header">
+	        <h3>TimeToWork Sidebar</h3>
+	      </div>
+	      <ul class="list-unstyled components nav-tabs">
+	          <li>
+	            <a href="dashboard">Dashboard</a>
+	          </li>
+	          <li>
+	            <a href="profile">Profile</a>
+	          </li>
+	          <li id='scheduling'>
+	            <a href="Scheduling">Scheduling</a>
+	          </li>
+	          <li id='timeavail'>
+	            <a href="TimeAvail">Submit Available Time</a>
+	          </li>
+	          <li id = 'tradeshift'>
+	            <a href="tradeShifts">Trade Shifts</a>
+	          </li>
+	          <li id='message'>
+	            <a href="message">Message</a>
+	          </li>
+	          <li>
+	            <a href="/employee/logout">Sign Out</a>
+	          </li>
+	        </ul>
+	    </nav>
+
+		<!-- Content -->
+		<div id="content" class="whole-table">
+
+			<nav>
+			  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+			    <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#inbox" role="tab" aria-controls="nav-home" aria-selected="true">Inbox</a>
+			    <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#sent" role="tab" aria-controls="nav-profile" aria-selected="false">Sent</a>
+			    <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#newMessage" role="tab" aria-controls="nav-contact" aria-selected="false">New Message</a>
+			  </div>
+			</nav>
+			<div class="tab-content" id="nav-tabContent">
+				  <div class="tab-pane fade show active" id="inbox" role="tabpanel" aria-labelledby="nav-home-tab">
+				  </div>
+				  <div class="tab-pane fade" id="sent" role="tabpanel" aria-labelledby="nav-profile-tab">
+				  </div>
+				  <div class="tab-pane fade message-table" id="newMessage" role="tabpanel" aria-labelledby="nav-contact-tab">
+						<div class="col-sm-8 contact-form">
+							<form id="contact" method="post" class="form" role="form">
+							<div class="row">
+								<div class="col-xs-6 col-md-6 form-group">
+								<input class="form-control" id="email" name="email" placeholder="Email" type="email" required />
+								</div>
+							</div>
+							<textarea class="form-control" id="messageText" name="message" placeholder="Message" rows="5"></textarea>
+							<br />
+							<div class="row">
+								<div class="col-xs-12 col-md-12 form-group">
+								<button class="btn btn-primary pull-right" id="sendButton" type="submit">Send</button>
+								</div>
+							</div>
+							</form>
+						</div>
+				  </div>
+			</div>
+
+
+
+
+		</div>
+	</div>
+
+<!-- JS File here-->
+	<script type="text/javascript" src="/js/Employer.js"></script>
+	<script type="text/javascript" src="/js/Employee.js"></script>
+	<script type="text/javascript" src="/js/Company.js"></script>
+<!-- 	<script type="text/javascript" src="MockData.js"></script> -->
+	<script type="text/javascript" src="/js/sidebar.js"></script>
+	<script type="text/javascript" src="/js/message.js"></script>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+ </body>
+</html>

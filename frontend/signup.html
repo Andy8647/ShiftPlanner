@@ -1,0 +1,98 @@
+<!-- sign up page -->
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+ <head>
+ 	<meta charset="utf-8">
+    <title>Sign Up</title>
+    <!-- CSS File here-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+ </head>
+
+ <body>
+
+    <!---- Main Page Header ---->
+    <div id="header_box">
+      <h1>
+        <center>Time to Work</center>
+      </h1>
+    </div>
+
+    <!---- Sign Up Box ---->
+    <div>
+        <div id="signup">
+            <div class="container">
+                <div id="signup-row" class="row justify-content-center align-items-center">
+                    <div id="signup-column" class="col-md-6">
+                        <div id="signup-box" class="col-md-12">
+                            <form id="signup-form" class="form" method="post" action="/api/employees">
+                                <h3 class="text-center text-info">Sign Up</h3>
+                                <p class="text-center text-info"> 
+                                If you want to sign up as an employer, please contact our admin 647-123-WORK. </p>
+                                <div class="form-group">
+                                    <label for="email" class="text-info">Email:</label><br>
+                                    <input type="text" name="email" id="email" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="password" class="text-info">Password:</label><br>
+                                    <input type="password" name="password" id="pw" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="password" class="text-info">Confirm Password:</label><br>
+                                    <input type="password" name="cpassword" id="cpw" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="name" class="text-info">Name:</label><br>
+                                    <input type="text" name="name" id="name" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone" class="text-info">Phone Number:</label><br>
+                                    <input type="number" name="phone" id="phone" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="companyName" class="text-info">Company:</label><br>
+                                    <input type="text" name="companyName" id="company" class="form-control"><br>
+                                <div class="form-group">
+                                    <label for="position" class="text-info">Position:</label>
+                                    <select name='position' class="browser-default custom-select" id="selectPosition">
+                                        <option selected value="none">Select Your Position</option>
+                                        <option value="waiter">Waiter</option>
+                                        <option value="waitress">Waitress</option>
+                                        <option value="cook">Cook</option>
+                                        <option value="supervisor">Supervisor</option>
+                                        <option value="cashier">Cashier</option>
+                                    </select>
+                                </div><br>
+                                <div class="text-right">
+                                    <center><input type="submit" name="signup" id="signupButton" class="btn btn-info btn-md" value="Sign Up"></center>
+                                     <a href="login" class="text-info">Back</a>
+<!--                                     <input type="button" name="back" class="btn btn-info btn-md" value="back" method='get' action='/login'>
+ -->                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<!-- JS File here-->
+<!-- <script type="text/javascript" src="Employee.js"></script>
+<script type="text/javascript" src="Employer.js"></script>
+<script type="text/javascript" src="Company.js"></script>
+<script type="text/javascript" src="MockData.js"></script> -->
+<script type="text/javascript" src="/js/signup.js"></script>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>

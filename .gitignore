@@ -1,0 +1,8 @@
+# dependencies
+/node_modules
+
+#misc
+node_modules
+mongo-data
+.DS_Store
+package-lock.json

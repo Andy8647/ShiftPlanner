@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset = "utf-8">
+	<title> My Profile </title>
+	 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="/css/profile_style.css">
+	<link rel="stylesheet" href="/css/sidebar.css">
+</head>
+	<div class="wrapper">
+		<!-- sidebar -->
+	    <nav id="sidebar">
+	      <div class="sidebar-header">
+	        <h3>TimeToWork Sidebar</h3>
+	      </div>
+	      <ul class="list-unstyled components nav-tabs">
+	          <li>
+	            <a href="dashboard">Dashboard</a>
+	          </li>
+	          <li>
+	            <a href="profile">Profile</a>
+	          </li>
+	          <li id='scheduling'>
+	            <a href="Scheduling">Scheduling</a>
+	          </li>
+	          <li id='timeavail'>
+	            <a href="TimeAvail">Submit Available Time</a>
+	          </li>
+	          <li id = 'tradeshift'>
+	            <a href="tradeShifts">Trade Shifts</a>
+	          </li>
+	          <li id='message'>
+	            <a href="message">Message</a>
+	          </li>
+	          <li>
+	            <a href="/employee/logout">Sign Out</a>
+	          </li>
+	        </ul>
+	    </nav>
+
+	<div class="container">
+		<div class="row">
+			<div class="container col-8">
+				<div class="row profileHeader" >
+					<h3>My Profile</h3>
+				</div>
+				<div class="row profileInfoContainer">
+					<div class="container col-4">
+						<img src="/img/default.png" class="profilePic" id='pic'>
+					</div>
+					<div class="container col-4" id="personalInfo">
+						<div class="row">
+							<div class="col-6 infoHeader">
+								<label>Name: </label>
+							</div>
+						</div>
+ 						<div class="row">
+							<div class="col-6 infoHeader">
+								<label>Email: </label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-6 infoHeader">
+								<label>Phone: </label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-6 infoHeader">
+								<label>Company Name: </label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-6 infoHeader">
+								<label>Position: </label>
+							</div>
+						</div>
+ 						<button class='btn btn-block btn-primary changePassword' data-toggle="modal" data-target="#changePasswordModal">Change Password</button>
+ 					</div>
+				</div>
+				<div class='row'>
+
+						<form id='uploadPicture' action='/api/upload' method= 'POST' enctype="multipart/form-data">
+ 							 <div class="col-12 form-group">
+   								 <label for="myPic">Upload File</label>
+   								 <input name="myImg" type="file" class="form-control-file" id="myPic">
+ 							 </div>
+ 							 <div class="col-8">
+ 							 <input type="submit" class='btn btn-block btn-primary uploadProfilePicBut' value="Upload Profile Picture">
+ 							</div>
+						</form>
+					</div>
+					<div class='col-6'>
+					</div>
+			</div>
+		</div>
+	</div>
+
+<div class="modal fade" id="changePasswordModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content" id="modal">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalTitle">Change Password</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        </button>
+      </div>
+      <div class="modal-body" id="passwordBody">
+        	<form id='newPasswordForm'>
+        		<label> New Password: </label>
+ 				<input id='newPassword' class="form-control" type="password" placeholder="Enter your new password">
+ 				<label> Confirm Password: </label>
+ 				<input id='cnewPassword' class="form-control" type="password" placeholder="Confirm your new password">
+ 			</form>
+      </div>
+      <div class="modal-footer" id='changePWFooter'>
+      	<div class="row">
+      		<button id='changePWSubmit' type="button" class="col-12 btn btn-block btn-primary">Submit</button>
+      	</div>
+      	<div class='row'>
+              <div class='col-12'>
+        <button id='pwBack'type="button" class="btn btn-block btn-secondary" data-dismiss="modal">Close</button>
+        	</div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- JS File here-->
+<script type="text/javascript" src="/js/Employee.js"></script>
+<script type="text/javascript" src="/js/Employer.js"></script>
+<script type="text/javascript" src="/js/Company.js"></script>
+<script type="text/javascript" src="/js/sidebar.js"></script>
+<!-- <script type="text/javascript" src="MockData.js"></script>
+ -->
+ <script type="text/javascript" src="/js/profile.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
